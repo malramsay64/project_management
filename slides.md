@@ -37,14 +37,14 @@ Project Management for Reproducible Science
 - I have adapted to the resources we have available at USYD
     - Hopefully also more related to the work we do
 
-- If you look at *one* the Cookiecutter Data Science is excellent
+- If you look at *one*, Cookiecutter Data Science is excellent
 
 ---
 
 ## GitHub for Project Management
 
-- Idea came from the Open Source Malaria Project
-- Bitbucket and GitLab are alternatives
+- Idea came from the [Open Source Malaria](https://github.com/OpenSourceMalaria) Project
+- [Bitbucket](https://bitbucket.org/product) and [GitLab](https://about.gitlab.com/) are alternatives
 
 ---
 
@@ -53,9 +53,9 @@ Project Management for Reproducible Science
 - Rarely single project
     - code and simulations
 - Linking between projects, issues, commits
-- Issues are a TODO list of sorts
+- Issues are a TODO list
 - Collaborative
-    - easy to have multiple people on the same project
+    - easy to have multiple collaborators on the same project
 - Students get a bunch of [free stuff](https://education.github.com/pack)
 - USYD has [enterprise licence](https://informatics.sydney.edu.au/code-repository/)
 
@@ -64,6 +64,11 @@ Project Management for Reproducible Science
 - More than just having a project on GitHub
     - Actually using the tools
     - Project Kanban boards
+
+- Github is where a lot of open source development occurs
+    - Gives you exposure
+    - Recruiters actually look at it
+    - Contribute back to projects you use
 
 ---
 
@@ -77,14 +82,14 @@ Project Management for Reproducible Science
 │   ├── processed      <- The final, canonical data sets for modeling.
 │   └── simulation     <- The original, immutable simulation data.
 │
-├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
+├── notebooks          <- Jupyter notebooks.
 │
 ├── logbook            <- Project logbook
 │
 ├── reports            <- Generated analysis as markdown, HTML, PDF, LaTeX, etc.
 │   └── figures        <- Generated graphics and figures to be used in reporting
 │
-├── environment.yml    <- The requirements file for reproducing the analysis environment
+├── environment.yml    <- The requirements file for reproducing the analysis/simulation environment
 │
 └── src                <- Source code for use in this project.
     ├── __init__.py    <- Makes src a Python module
@@ -145,13 +150,14 @@ Project Management for Reproducible Science
 
 ???
 
-- note not the only way to do things
+- not not the only way to do versioning
     - I like this way the best
 
-- Patch -> I made some corrections / addressed some comments
-- Minor -> I wrote new paragraphs / added new figures
-- Major -> I rewrote everything
-    - Or 1.0 -> I submitted my thesis
+- Example of a paper or thesis
+    - Patch -> I made some corrections / addressed some comments
+    - Minor -> I wrote new paragraphs / added new figures
+    - Major -> I rewrote everything
+        - Or 1.0 -> I submitted my thesis
 
 ---
 
@@ -177,12 +183,14 @@ Project Management for Reproducible Science
 - [Singularity](https://singularity.lbl.gov/)
     - Container for Science
     - Is actually installed on Artemis
+        - `module load singularity`
 
 ---
 
 #### Docker Example
 
-Docker file for [lammps](https://github.com/malramsay64/lammps-docker/blob/master/Dockerfile)
+Docker file for [lammps](https://github.com/malramsay64/lammps-docker/blob/master/Dockerfile),
+the start of which is below.
 
 ```docker
 FROM centos:7.2.1511
@@ -198,12 +206,17 @@ RUN git clone git://git.lammps.org/lammps-ro.git /srv/lammps &&\
     mkdir -p MAKE/MINE
 ```
 
-To run container:
+To run the resulting container:
 
 ```bash
 docker run -it malramsay/lammps
 ```
 
+???
+
+- Getting docker configured is not entirely straightforward
+- Starting from nothing (base container) is hard
+    - There are lots of dependencies you don't think about
 
 ---
 
@@ -217,6 +230,7 @@ docker run -it malramsay/lammps
     - similar to modules
 - Generate complete specification of environment
     - installs everything for your project in a single command
+- Create your [own packages](https://conda.io/docs/user-guide/tasks/build-packages/index.html)
 
 ???
 
