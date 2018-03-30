@@ -27,7 +27,6 @@ Project Management for Reproducible Science
 - Software Carpentry [Reproducible Science with R](https://swcarpentry.github.io/r-novice-gapminder/)
 - [Cookiecutter Data Science](https://drivendata.github.io/cookiecutter-data-science/#cookiecutter-data-science)
 - Chodera Lab's [Computational Chemistry Cookiecutter](https://github.com/choderalab/cookiecutter-compchem)
-- [Open Science Framework](https://osf.io/)
 
 ???
 
