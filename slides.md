@@ -625,7 +625,8 @@ pbs: True
 - Canonical Data store on RDS
 
 - [Crystal_Melting](https://github.com/malramsay64/Crystal_Melting)
-    - Private repository for now at least
+    - Opened up as a public repository
+    - Not a perfect example
 
 ???
 
