@@ -4,7 +4,7 @@
   "description": "Project Management for Reproducible Science",
   "main": "index.js",
   "dependencies": {
-    "remarker": "^1.10.0"
+    "remarker": "^1.11.2"
   },
   "devDependencies": {},
   "scripts": {
